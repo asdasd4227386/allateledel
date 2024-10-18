@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Állateledel Kosár</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .product {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        .product button {
+            padding: 5px 10px;
+            background-color: #ff6f61;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .product button:hover {
+            background-color: #e55b50;
+        }
+
+        #cart {
+            margin-top: 20px;
+            border-top: 1px solid #333;
+            padding-top: 20px;
+        }
+
+        #cart h2 {
+            margin-bottom: 15px;
+        }
+
+        #cart-items {
+            margin-bottom: 15px;
+        }
+
+        #total {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Állateledel Kosár</h1>
+
+    <div class="product">
+        <span>Kutyaeledel - Bárány és rizs (5000 Ft)</span>
+        <button onclick="addToCart('Kutyaeledel - Bárány és rizs', 5000)">Kosárba</button>
+    </div>
+
+    <div class="product">
+        <span>Macskaeledel - Lazacos (3000 Ft)</span>
+        <button onclick="addToCart('Macskaeledel - Lazacos', 3000)">Kosárba</button>
+    </div>
+
+    <div class="product">
+        <span>Haleledel - Pelyhes (2500 Ft)</span>
+        <button onclick="addToCart('Haleledel - Pelyhes', 2500)">Kosárba</button>
+    </div>
+
+    <div id="cart">
+        <h2>Kosár</h2>
+        <div id="cart-items">
+            <!-- A kosárban lévő termékek jelennek meg itt -->
+        </div>
+        <div id="total">Összesen: 0 Ft</div>
+    </div>
+
+    <script>
+        let cart = [];
+        let total = 0;
+
+        function addToCart(productName, price) {
+            // Termék hozzáadása a kosárhoz
+            cart.push({ name: productName, price: price });
+
+            // Kosár frissítése
+            updateCart();
+        }
+
+        function updateCart() {
+            // Kosár termékeinek megjelenítése
+            const cartItemsDiv = document.getElementById('cart-items');
+            cartItemsDiv.innerHTML = '';
+
+            cart.forEach(item => {
+                const productDiv = document.createElement('div');
+                productDiv.textContent = item.name + ' - ' + item.price + ' Ft';
+                cartItemsDiv.appendChild(productDiv);
+            });
+
+            // Összeg frissítése
+            total = cart.reduce((acc, item) => acc + item.price, 0);
+            document.getElementById('total').textContent = 'Összesen: ' + total + ' Ft';
+        }
+    </script>
+
+</body>
+</html>

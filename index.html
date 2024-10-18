@@ -10,19 +10,44 @@
   <header>
     <h1>Állateledel Webshop</h1>
     <nav>
-      <ul>
-        <li><a href="index.html">Főoldal</a></li>
-        <li><a href="asd1">masikoldal</a></li>
-        <li><a href="asd2.html">harmadik</a></li>
-      </ul>
+        <ul>
+            <li><a href="index.html">Kezdőlap</a></li>
+            <li><a href="products.html">Termékek</a></li>
+            <li><a href="about.html">Rólunk</a></li>
+            <li><a href="kosar.html">Kosár</a></li>
+        </ul>
     </nav>
   </header>
 
+  <section id="home" class="hero">
+    <h2>Friss és minőségi eledel kedvenceidnek</h2>
+    <p>Válassz a legjobb minőségű kutya- és macskaeledelek közül, amelyek tele vannak tápanyagokkal és szeretettel.</p>
+    <a href="products.html" class="button">Fedezd fel a termékeket</a>
+</section>
+
   <main>
-    <section>
-      <h2>Kiemelt állateledel termékek</h2>
-      <p>Itt találhatók a legnépszerűbb termékek és kedvezmények.</p>
-      <!-- Termékek listája, képek -->
+    <section id="products">
+        <h2>Kiemelt ajánlatunk</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="dog-food.jpg" alt="Kutyaeledel">
+                <h3>Kutyaeledel</h3>
+                <p>Magas fehérjetartalmú, természetes összetevőkből készült eledel.</p>
+                <button>Vásárlás</button>
+            </div>
+            <div class="product">
+                <img src="cat-food.jpg" alt="Macskaeledel">
+                <h3>Macskaeledel</h3>
+                <p>Teljes értékű, vitaminokkal dúsított macskaeledel.</p>
+                <button>Vásárlás</button>
+            </div>
+            <div class="product">
+                <img src="fish-food.jpg" alt="Halaknak való eledel">
+                <h3>Haleledel</h3>
+                <p>Speciális táplálék akváriumi halaknak, egészségük megőrzésére.</p>
+                <button>Vásárlás</button>
+            </div>
+        </div>
     </section>
     <aside>
       <h2>Hirdetések</h2>
@@ -31,9 +56,19 @@
     </aside>
   </main>
 
-  <footer>
-    <p>Elérhetőségek: +36 30 123 4567 | info@allateledel.hu</p>
-    <p>Webfejlesztő: én</p>
-  </footer>
+
+
+    <section id="contact">
+        <h2>Kapcsolat</h2>
+        <p>Kérdésed van? Írj nekünk az <a href="mailto:info@allateledelwebshop.hu">info@allateledelwebshop.hu</a> e-mail címen vagy hívj minket a 06-30-123-4567-es telefonszámon.</p>
+    </section>
+    <section id="cart">
+        <h2>Kosár</h2>
+        <div id="cart-items">
+            <!-- Kosárban lévő termékek -->
+        </div>
+        <div id="total">Összesen: 0 Ft</div>
+    </section>
+    <script src="cart.js"></script>
 </body>
 </html>
