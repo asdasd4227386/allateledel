@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Állateledel Webshop</title>
+  <link rel="stylesheet" href="master.css">
+</head>
+<body>
+  <script src="jquery-3.7.1.min.js"></script>
+  <header>
+    <h1>Állateledel Webshop</h1>
+    <nav>
+        <ul>
+            <li><a href="index.html">Kezdőlap</a></li>
+            <li><a href="products.html">Termékek</a></li>
+            <li><a href="about.html">Rólunk</a></li>
+            <li><a href="contact.html">Kapcsolat</a></li>  
+           
+              
+       
+        </ul>
+        
+            <a href="kosar.html">
+            <img src="/img/basket.svg" id="basket-icon" alt="kosár">
+          </a>
+       
+        </nav>
+      
+    </nav>
+  </header>
+
+  <section id="home" class="hero">
+    <h2>Friss és minőségi eledel kedvenceidnek</h2>
+    <p>Válassz a legjobb minőségű kutya- és macskaeledelek közül, amelyek tele vannak tápanyagokkal és szeretettel.</p>
+    <a href="products.html" class="button">Fedezd fel a termékeket</a>
+</section>
+
+  <main>
+    <section id="products">
+        <h2>Kiemelt ajánlatunk</h2>
+        <div class="product-grid">
+            <div class="product">
+                <img src="/img/kutyaeledelmain.jpg" class="product-image" alt="Kutyaeledel">
+                <h3 class="product-name">Kutyaeledel</h3>
+                <p>Magas fehérjetartalmú, természetes összetevőkből készült eledel.</p>
+                <p class="price">3253 Ft</p>
+                <button class="purchase">Vásárlás</button>
+            </div>
+            <div class="product">
+                <img src="/img/macskaeledelmain.jpg" class="product-image" alt="Macskaeledel">
+                <h3 class="product-name">Macskaeledel</h3>
+                <p>Teljes értékű, vitaminokkal dúsított macskaeledel.</p>
+                <p class="price">7000 Ft</p>
+                <button class="purchase">Vásárlás</button>
+            </div>
+            <div class="product">
+                <img src="/img/haleledelmain.jpg" class="product-image" alt="Halaknak való eledel">
+                <h3 class="product-name">Haleledel</h3>
+                <p>Speciális táplálék akváriumi halaknak, egészségük megőrzésére.</p>
+                <p class="price">5000 Ft</p>
+                <button class="purchase">Vásárlás</button>
+            </div>
+        </div>
+    </section>
+   <!-- <aside>
+      <h2>Hirdetések</h2>
+      <p>reklamok</p>
+       Hirdetések képei
+    </aside> -->
+  </main>
+
+
+
+    <section id="contact">
+        <h2>Kapcsolat</h2>
+        <p>Kérdésed van? Írj nekünk az <a href="mailto:info@allateledelwebshop.hu">info@allateledelwebshop.hu</a> e-mail címen vagy hívj minket a 06-30-123-4567-es telefonszámon.</p>
+    </section>
+    
+    
+    <script src="cart.js"></script>
+</body>
+</html>
